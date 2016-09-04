@@ -5,11 +5,24 @@ package Devices;
  */
 public class Light {
 
+    private String name = "";
+
+    public Light() {
+
+    }
+
+    public Light(String name) {
+
+        this.name = name;
+    }
+
     public void on() {
-        System.out.println("Light turns on");
+
+        System.out.println(name + " Light turns on");
     };
 
     public void off() {
-        System.out.println("Light turns off");
+
+        System.out.println(name + " Light turns off");
     };
 }
