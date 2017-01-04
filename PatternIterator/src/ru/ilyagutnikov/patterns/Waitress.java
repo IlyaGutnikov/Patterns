@@ -18,4 +18,19 @@ public class Waitress {
 
         allMenus.print();
     }
+
+    public void printVegeterianMenu() {
+
+        Iterator iterator = allMenus.createIterator();
+        while (iterator.hasNext()) {
+
+            MenuComponent menuComponent = (MenuComponent) iterator.next();
+            try {
+                if (menuComponent.isVegeterian()) {
+                    menuComponent.print();
+                }
+            } catch (UnsupportedOperationException e) {}
+
+        }
+    }
 }

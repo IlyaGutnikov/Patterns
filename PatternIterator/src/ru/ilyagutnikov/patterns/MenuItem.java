@@ -1,5 +1,7 @@
 package ru.ilyagutnikov.patterns;
 
+import java.util.Iterator;
+
 /**
  * Created by IlyaGutnikov on 16.12.2016.
  */
@@ -41,5 +43,9 @@ public class MenuItem extends MenuComponent {
 
     public void print() {
         System.out.println("  " + getName() +"   " + (isVegeterian() ? "v" : "")   +  "   " + getDescription() + "   " + getPrice());
+    }
+
+    public Iterator createIterator() {
+        return new NullIterator();
     }
 }

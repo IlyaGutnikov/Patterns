@@ -36,5 +36,8 @@ public class Main {
         Waitress waitress = new Waitress(allMenus);
         waitress.printMenu();
 
+        System.out.println("VEGETERIAN");
+        waitress.printVegeterianMenu();
+
     }
 }
