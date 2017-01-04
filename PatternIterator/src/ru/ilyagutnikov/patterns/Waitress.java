@@ -1,5 +1,6 @@
 package ru.ilyagutnikov.patterns;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
@@ -7,23 +8,21 @@ import java.util.Iterator;
  */
 public class Waitress {
 
-    Menu pancakeHouseMenu;
-    Menu dinnerMenu;
+    ArrayList menus;
 
-    public Waitress (Menu pancakeHouseMenu, Menu dinnerMenu) {
+    public Waitress(ArrayList menus) {
 
-        this.dinnerMenu = dinnerMenu;
-        this.pancakeHouseMenu = pancakeHouseMenu;
+        this.menus = menus;
     }
 
-    public  void printMenu() {
+    public void printMenu() {
 
-        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
-        Iterator dinnerIterator = dinnerMenu.createIterator();
-        System.out.println("MENU\n----\nBREAKFAST");
-        printMenu(pancakeIterator);
-        System.out.println("\nLUNCH");
-        printMenu(dinnerIterator);
+        Iterator menuIterator = menus.iterator();
+        while (menuIterator.hasNext()) {
+
+            Menu menu = (Menu) menuIterator.next();
+            printMenu(menu.createIterator());
+        }
 
     }
 

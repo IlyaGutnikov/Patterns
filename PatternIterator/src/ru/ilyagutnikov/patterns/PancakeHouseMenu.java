@@ -29,7 +29,7 @@ public class PancakeHouseMenu implements Menu {
         menuItems.add(menuItem);
 
     }
-    
+
     @Override
     public Iterator createIterator() {
 
