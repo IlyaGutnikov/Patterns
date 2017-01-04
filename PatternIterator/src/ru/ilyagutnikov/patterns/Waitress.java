@@ -1,14 +1,16 @@
 package ru.ilyagutnikov.patterns;
 
+import java.util.Iterator;
+
 /**
  * Created by IlyaGutnikov on 04.01.2017.
  */
 public class Waitress {
 
-    PancakeHouseMenu pancakeHouseMenu;
-    DinnerMenu dinnerMenu;
+    Menu pancakeHouseMenu;
+    Menu dinnerMenu;
 
-    public Waitress (PancakeHouseMenu pancakeHouseMenu, DinnerMenu dinnerMenu) {
+    public Waitress (Menu pancakeHouseMenu, Menu dinnerMenu) {
 
         this.dinnerMenu = dinnerMenu;
         this.pancakeHouseMenu = pancakeHouseMenu;

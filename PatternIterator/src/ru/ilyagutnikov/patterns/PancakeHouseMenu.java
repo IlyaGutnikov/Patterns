@@ -1,11 +1,12 @@
 package ru.ilyagutnikov.patterns;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by IlyaGutnikov on 16.12.2016.
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu {
 
     ArrayList menuItems;
 
@@ -28,9 +29,10 @@ public class PancakeHouseMenu {
         menuItems.add(menuItem);
 
     }
-
+    
+    @Override
     public Iterator createIterator() {
 
-        return new PancakeHouseMenuIterator(menuItems);
+        return menuItems.iterator();
     }
 }

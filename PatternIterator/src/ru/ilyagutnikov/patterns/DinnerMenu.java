@@ -1,9 +1,13 @@
 package ru.ilyagutnikov.patterns;
 
+import ru.ilyagutnikov.patterns.Menu;
+
+import java.util.Iterator;
+
 /**
  * Created by IlyaGutnikov on 16.12.2016.
  */
-public class DinnerMenu {
+public class DinnerMenu implements Menu {
 
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
@@ -33,7 +37,7 @@ public class DinnerMenu {
             numberOfItems = numberOfItems + 1;
         }
     }
-
+    @Override
     public Iterator createIterator() {
 
         return new DinnerMenuIterator(menuItems);
