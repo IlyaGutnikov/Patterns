@@ -1,6 +1,12 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        GumballMachine gumballMachine = new GumballMachine(200);
+
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
+
+        gumballMachine.insertQuarter();
+        gumballMachine.ejectQuarter();
     }
 }

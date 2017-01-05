@@ -9,16 +9,20 @@ public class GumballMachine {
     State soldState;
     State winnerState;
 
-    State state = soldOutState;
+    State state;
     int count = 0;
 
     public GumballMachine(int numberOfGumballs) {
+
+        count = numberOfGumballs;
 
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
         soldState = new SoldState(this);
         winnerState = new WinnerState(this);
+
+        state = noQuarterState;
     }
 
     public void insertQuarter() {
