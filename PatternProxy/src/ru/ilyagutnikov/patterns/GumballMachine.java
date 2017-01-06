@@ -4,7 +4,10 @@
 
 package ru.ilyagutnikov.patterns;
 
-public class GumballMachine {
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote {
 
     String location;
 
@@ -17,7 +20,7 @@ public class GumballMachine {
     State state;
     int count = 0;
 
-    public GumballMachine(int numberOfGumballs, String location) {
+    public GumballMachine(int numberOfGumballs, String location) throws RemoteException {
 
         count = numberOfGumballs;
 

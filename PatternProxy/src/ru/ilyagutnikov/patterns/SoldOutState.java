@@ -5,7 +5,7 @@ package ru.ilyagutnikov.patterns;
  */
 public class SoldOutState implements State {
 
-    GumballMachine gumballMachine;
+    transient GumballMachine gumballMachine;
 
     public SoldOutState(GumballMachine gumballMachine) {
 
