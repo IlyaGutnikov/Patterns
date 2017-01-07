@@ -1,9 +1,9 @@
-package ru.ilyagutnikov.patterns;
+package ru.ilyagutnikov.patterns.Duck;
 
 /**
  * Created by ilyagutnikov on 07.01.17.
  */
-public class RedheadDuck implements Quackable {
+public class MallardDuck implements Quackable {
 
     @Override
     public void quack() {

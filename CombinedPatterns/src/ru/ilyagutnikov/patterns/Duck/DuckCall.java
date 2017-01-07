@@ -1,4 +1,4 @@
-package ru.ilyagutnikov.patterns;
+package ru.ilyagutnikov.patterns.Duck;
 
 /**
  * Created by ilyagutnikov on 07.01.17.
