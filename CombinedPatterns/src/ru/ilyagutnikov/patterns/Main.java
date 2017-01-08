@@ -6,6 +6,8 @@ import ru.ilyagutnikov.patterns.Decorator.QuackCounter;
 import ru.ilyagutnikov.patterns.Duck.*;
 import ru.ilyagutnikov.patterns.Factory.AbstaractDuckFactory;
 import ru.ilyagutnikov.patterns.Factory.CountingDuckFactory;
+import ru.ilyagutnikov.patterns.Observer.MallardDuckObser;
+import ru.ilyagutnikov.patterns.Observer.Quackologist;
 
 public class Main {
 
@@ -22,6 +24,11 @@ public class Main {
 
 
     void simulate(AbstaractDuckFactory duckFactory) {
+
+        Quackologist quackologist = new Quackologist();
+        MallardDuckObser mallardDuckObser = new MallardDuckObser();
+        mallardDuckObser.registerObserver(quackologist);
+        mallardDuckObser.quack();
 
         Quackable mallardDuck = duckFactory.createMallardDuck();
         Quackable redheadDuck = duckFactory.createRedheadDuck();
@@ -42,7 +49,6 @@ public class Main {
         flockOfDucks.add(duckCall);
 
         simulate(flockOfDucks);
-
 
         System.out.println("The duacks quacked " + QuackCounter.getNumberOfQuacks());
     }
