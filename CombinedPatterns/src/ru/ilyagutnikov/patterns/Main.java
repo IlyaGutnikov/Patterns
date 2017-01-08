@@ -1,6 +1,7 @@
 package ru.ilyagutnikov.patterns;
 
 import ru.ilyagutnikov.patterns.Adapter.GooseAdapter;
+import ru.ilyagutnikov.patterns.Composite.Flock;
 import ru.ilyagutnikov.patterns.Decorator.QuackCounter;
 import ru.ilyagutnikov.patterns.Duck.*;
 import ru.ilyagutnikov.patterns.Factory.AbstaractDuckFactory;
@@ -34,6 +35,14 @@ public class Main {
         simulate(duckCall);
         simulate(goose);
         simulate(mallardDuck2);
+
+        Flock flockOfDucks = new Flock();
+        flockOfDucks.add(mallardDuck);
+        flockOfDucks.add(redheadDuck);
+        flockOfDucks.add(duckCall);
+
+        simulate(flockOfDucks);
+
 
         System.out.println("The duacks quacked " + QuackCounter.getNumberOfQuacks());
     }
